@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class PowerOfFour {
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+
+        boolean isPowerOfFour = false;
+
+        if (num > 0) {
+            while (num % 4 == 0) {
+                num = num / 4;
+            }
+
+            if (num == 1) {
+                isPowerOfFour = true;
+            }
+        }
+
+        if (isPowerOfFour) {
+            System.out.println("True - It is a power of 4.");
+        } else {
+            System.out.println("False - It is NOT a power of 4.");
+        }
+
+        sc.close();
+    }
+}
