@@ -1,0 +1,51 @@
+class Swap {
+
+    // Swapping two integers
+    void swap(int a, int b) {
+        System.out.println("Before swapping (Integer): a = " + a + ", b = " + b);
+
+        int temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping (Integer): a = " + a + ", b = " + b);
+        System.out.println();
+    }
+
+    // Swapping two float numbers
+    void swap(float a, float b) {
+        System.out.println("Before swapping (Float): a = " + a + ", b = " + b);
+
+        float temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping (Float): a = " + a + ", b = " + b);
+        System.out.println();
+    }
+
+    // Swapping two characters
+    void swap(char a, char b) {
+        System.out.println("Before swapping (Character): a = " + a + ", b = " + b);
+
+        char temp = a;
+        a = b;
+        b = temp;
+
+        System.out.println("After swapping (Character): a = " + a + ", b = " + b);
+        System.out.println();
+    }
+}
+
+public class FunctionOverloadingDemo {
+
+    public static void main(String[] args) {
+
+        Swap obj = new Swap();
+
+        // Calling overloaded methods
+        obj.swap(10, 20);         // Integer
+        obj.swap(10.5f, 20.5f);   // Float
+        obj.swap('A', 'B');       // Character
+    }
+}
