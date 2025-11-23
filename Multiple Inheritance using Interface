@@ -1,0 +1,42 @@
+// First interface
+interface A {
+    void showA();
+}
+
+// Second interface
+interface B {
+    void showB();
+}
+
+// Class implementing both interfaces (Multiple Inheritance)
+class C implements A, B {
+
+    public void showA() {
+        System.out.println("This is method of Interface A");
+    }
+
+    public void showB() {
+        System.out.println("This is method of Interface B");
+    }
+
+    void showC() {
+        System.out.println("This is method of Class C");
+    }
+}
+
+// Main class
+public class MultipleInheritanceDemo {
+
+    public static void main(String[] args) {
+
+        // Creating object of class C
+        C obj = new C();
+
+        // Calling methods from both interfaces
+        obj.showA();
+        obj.showB();
+
+        // Calling method of class
+        obj.showC();
+    }
+}
