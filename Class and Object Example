@@ -1,0 +1,37 @@
+// Defining a class
+class Student {
+
+    // Data members (Variables)
+    int rollNo;
+    String name;
+    double marks;
+
+    // Member function (Method) to accept data
+    void input(int r, String n, double m) {
+        rollNo = r;
+        name = n;
+        marks = m;
+    }
+
+    // Member function (Method) to display data
+    void display() {
+        System.out.println("Roll No : " + rollNo);
+        System.out.println("Name    : " + name);
+        System.out.println("Marks   : " + marks);
+    }
+}
+
+// Main class
+public class ClassObjectDemo {
+
+    public static void main(String[] args) {
+
+        // Creating object of Student class
+        Student s1 = new Student();
+
+        // Calling methods using object
+        s1.input(101, "Rahul", 85.5);
+        System.out.println("Student Details:");
+        s1.display();
+    }
+}
